@@ -1,6 +1,7 @@
 #Analyses of house-elves with Dr. Granger
 
 #import data: reads in data collected on magical house elves (doby death was most upsetting )
+<<<<<<< HEAD
 house_elves_1 <- read.csv("data/houseelf_earlength_dna_data.csv",header=TRUE) 
 
 #function to calculate the GC-content of a sequence, regardless of the capitalization of that sequence.
@@ -21,3 +22,12 @@ if (sum(str_count(data, 'G')) | sum(str_count(data,'C')) > 0) {
 
 #print out gc content of dna sequences observed
 print(read_gc_content(house_elves_1$dnaseq))
+=======
+house_elves_1 <- read.csv("data/houseelf_earlength_dna_data_1.csv",header=TRUE) 
+
+get_size_class <- function(seq){
+   #Calculate the GC-content for one or more sequences
+   ear_lengths <- ifelse(seq > 10, "large", "small")
+   return(ear_lengths)
+}
+>>>>>>> cab2e6ea9f218ad930a80f08b6b8159cf1f99209
